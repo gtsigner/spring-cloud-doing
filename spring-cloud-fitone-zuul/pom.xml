@@ -10,10 +10,10 @@
         <relativePath>../spring-cloud-dependencies/pom.xml</relativePath>
     </parent>
 
-    <artifactId>spring-cloud-fitone-config</artifactId>
+    <artifactId>spring-cloud-fitone-zuul</artifactId>
     <packaging>jar</packaging>
 
-    <name>spring-cloud-fitone-config</name>
+    <name>spring-cloud-fitone-zuul</name>
     <url>http://www.oeynet.com</url>
     <inceptionYear>2018-Now</inceptionYear>
 
@@ -45,11 +45,15 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>
         <!-- Spring Cloud End -->
 
@@ -72,7 +76,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.godtoy.fitone.config.ConfigApplication</mainClass>
+                    <mainClass>com.godtoy.fitone.zuul.ZuulServerApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

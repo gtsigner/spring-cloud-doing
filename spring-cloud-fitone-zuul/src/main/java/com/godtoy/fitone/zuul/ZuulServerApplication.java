@@ -1,16 +1,15 @@
-package com.godtoy.fitone.config;
-
+package com.godtoy.fitone.zuul;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
-@SpringBootApplication
-@EnableConfigServer
 @EnableEurekaClient
-public class ConfigApplication {
+@EnableZuulProxy
+@SpringBootApplication
+public class ZuulServerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ConfigApplication.class, args);
+        SpringApplication.run(ZuulServerApplication.class, args);
     }
 }
